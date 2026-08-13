@@ -1,0 +1,458 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #093228;
+    --primary-hover: #1b6b86;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --transition: all 0.3s ease;
+}
+/* --- Global Styles & Variables ---
+   This part is where I put the general styles and variables that
+   I use in the whole website. The colors, spacing, and transition
+   is mostly put here so I can just reuse it in different parts
+   of the website. I also put the reset and font settings here so
+   the website looks more consistent when I open it in different
+   browsers.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Layout & Utilities ---
+   This part is for the common layout styles that I use in
+   different sections of my website. The .container and .section
+   is used to help me arrange the content and also keep the spacing
+   more organized. I use this in different parts like the home,
+   about me, and contact section.
+*/
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* --- Layout & Utilities --- */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 20px;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* --- Navigation Bar ---
+   This part is for the navigation bar that you see at the top
+   of the website. I use this to arrange the navigation links and
+   control the spacing and how it looks. I also add hover and
+   active effect so when the user put their mouse on the links,
+   they can see that it is clickable.
+*/
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+/* --- Navigation Bar --- */
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 25px;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+/* Hover effect */
+.nav-link:hover {
+    color: var(--primary-color);
+    background-color: #eff6ff;
+}
+
+/* Active Link State */
+.nav-link.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    border-radius: 0;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+    align-items: center;
+    text-align: center;
+}
+
+/* --- Hero Layout ---
+   This part is for the first section that the user will see
+   when they open the website. I use the hero section to put
+   my introduction, some important content, and the buttons
+   that the user can click. The image-holder is also used for
+   the main image or profile image.
+*/
+
+/* Layout for hero: image on the left, content on the right */
+.hero-grid {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.image-holder {
+    width: 200px;
+    height: 200px;
+    flex: 0 0 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+}
+
+.hero-content {
+    max-width: 720px;
+    text-align: left;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: #e2e8f0;
+}
+
+/* --- About Section ---
+   This part is where I put the About Me section of the website.
+   I use this section to show my profile, short introduction,
+   and some of my skills. The skills-tags is used to show the
+   different skills or technologies that I know in a more
+   organized way.
+*/
+
+.about-section {
+    background-color: var(--card-bg);
+}
+
+.about-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.about-image {
+    flex: 0 0 220px;
+    width: 220px;
+    height: 220px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background-color: #fafafa;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+}
+
+.about-text h3 {
+    margin-bottom: 12px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #f1f5f9;
+    color: var(--text-color);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.tag:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    cursor: default;
+}
+
+/* --- Contact Section ---
+   This part is for the Contact Me section. I use this for the
+   form where the user can put their name, email, and message.
+   I also use the form-status to show if something happen after
+   the user submit the form.
+*/
+.contact-section {
+    background-color: var(--bg-color);
+}
+
+.contact-form {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.btn-submit {
+    width: 100%;
+}
+
+.form-status {
+    margin-top: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* --- Footer ---
+   This part is just for the footer of the website. I use this
+   at the bottom of the page for simple information like the
+   copyright and other additional information.
+*/
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* --- Responsive Media Queries (Mobile & Tablet) ---
+   This part is for making the website responsive when it is
+   being open on smaller screen like tablet or mobile. I adjust
+   the navigation, sections, image size, and the layout so the
+   website will still looks organized and not mess up when the
+   screen is smaller.
+*/
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .section {
+        padding: 60px 15px;
+    }
+
+    /* Stack hero grid on small screens */
+    .hero-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 15px;
+        gap: 18px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .image-holder {
+        width: 160px;
+        height: 160px;
+        flex: 0 0 160px;
+        border-radius: 12px;
+    }
+
+    /* About image adjustments for smaller screens */
+    .about-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        width: 200px;
+        height: 200px;
+        flex: 0 0 200px;
+        border-radius: 12px;
+    }
+}

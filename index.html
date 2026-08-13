@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiane Heins Guevara | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!--This is where the navigation bar is placed -->
+    <header class="navbar-container">
+        <nav class="navbar">
+            <div class="logo">Xiane<span>.folio</span></div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">Know Me</a></li>
+                <li><a href="#contact" class="nav-link">Want to Know More</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- The contents for the webpage -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section hero-section">
+            <div class="hero-content">
+                <span class="badge">Computer Engineer & Builder</span>
+                <h1>Hi, I'm <span class="highlight">Xiane Heins Guevara</span></h1>
+                <p>
+                    A Computer Engineering student , passionate of making a change and believe that there's no such thing as an overnight success. It takes grit, determination, and a lot of hard work to achieve your goals.</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Learn More</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!--This contains section about Me -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-image">
+                        <!-- Replace the src with your own image file (e.g. images/profile.jpg) -->
+                        <img src="src/x formal.jpg" alt="Xiane Picture">
+                    </div>
+                    <div class="about-text">
+                        <p>A capable builder who understands systems deeply, creates things that genuinely help people,
+                             manages money wisely, protects his health, cultivates deep relationships, maintains strong 
+                             boundaries, keeps learning, and contributes to the people and communities that matter to 
+                             him—without losing himself in the process.</p>
+                        
+                        <h3>Technical Skills</h3>
+                        <div class="skills-tags">
+                            <span class="tag">PCB Designing</span>
+                            <span class="tag">Network Configuration</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">ESP32 & Arduino</span>
+                            <span class="tag">Logic Circuits</span>
+                            <span class="tag">Git & Version Control</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Contact Me</h2>
+                <p class="section-subtitle">Got something in mind? Let's talk</p>
+                
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Your message here..." required></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn" class="btn btn-primary btn-submit">Send Message</button>
+                    <div id="formStatus" class="form-status"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--  Footer Section-->
+    <footer>
+        <p>&copy; 2026 Xiane Heins Guevara. All rights reserved.</p>
+    </footer>
+
+    <script src="Script.js"></script>
+</body>
+</html>
